@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - GenPass</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/GenPass.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header >
+        <nav class="navbar navbar-expand-sm navbar-light text-white navigation mb-5">
+           
+            <div class="mx-4 container-fluid">
+               
+                <a class="text-white text-decoration-none h2" asp-area="" asp-controller="Home" asp-action="Index"><b>GenPass</b></a>
+
+               
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon "></span>
+                </button>
+
+         
+                <div class="collapse navbar-collapse justify-content-between" id="navbarContent">
+
+                    <partial name="~/Views/Shared/Navigation/Navigation.cshtml" />
+
+                   
+                    <div>
+                        <partial name="_LoginPartial" />
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer text-white">
+        <div class="mx-5 my-5">
+            <h1><b>GenPass</b></h1>
+            <div class="d-flex flex-wrap justify-content-between">
+                <p class="text-wrap">GenPass is a secure and user-friendly platform designed to help you generate and manage strong passwords. With GenPass, you can create fully customized passwords tailored to your needs — choose the length, number of capital letters, special symbols, and more. All your passwords are safely stored and can be easily viewed on your personal profile page, giving you quick access while keeping your data protected. Say goodbye to weak passwords and hello to effortless, reliable security with GenPass.</p>
+                <div class="lh-lg">
+                    <partial name="~/Views/Shared/Navigation/Navigation.cshtml" /> 
+                    <partial name="_LoginPartial" />
+                </div>
+               
+            </div>
+            <hr>
+            <p class="text-center w-100 mt-1">Made by Hristiyan Yordanov</p>
+           
+        </div>
+        
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
