@@ -44,9 +44,21 @@ footer p {
     line-height: 1.8;
 }
 .nav-link.active {
-    background-color: #0a2734!important;
-    color: white!important;
+    background-color: #0a2734 !important;
+    color: white !important;
 }
+
 .nav-link {
-    color: #0a2734!important;
+    color: #0a2734 !important;
 }
+#nav-global {
+    color: white !important;
+}
+.btn-primary {
+    background: #0a2734 !important;
+    border-color: #0a2734 ;
+}
+    .btn-primary:hover {
+        background: #041e2f !important;
+        border-color: #041e2f;
+    }
